@@ -2,26 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
 
-## Development server
+This project helps you display our web content in preferably in english or spanish depending on your choice.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+@ng-translate is used.
+npm install @ngx-translate/core @ngx-translate/http-loader --save
 
-## Code scaffolding
+Nothing fancy is going on. We just added the  TranslateModule and configured it to use the HttpClient to load translations. We exported TranslateModule as well to make the pipe transform available in the AppModule and in HTML templates. In the constructor, we specified available languages and used a function provided by ngx-translate to get and use the browser’s default language.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+By default, the TranslateHttpLoader will load translations from the /assets/i18n/ folder, so let’s add a couple of files there.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
