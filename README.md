@@ -12,4 +12,15 @@ Nothing fancy is going on. We just added the  TranslateModule and configured it 
 By default, the TranslateHttpLoader will load translations from the /assets/i18n/ folder, so let’s add a couple of files there.
 
 
+and if you have to change the path of json file
+export function translateLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient , '/assests/i18n/myjsons' , '.json');
+}
+
+
+Also, if you use the lazy loading and try seeing the changes in your modules, please include 
+TranslateModule.forChild({}) in your imports in the child module.ts by importing TranslateModule from ngnx/tranlate. Because your i18n.module already exports TranslateModule.
+
+
+
 
