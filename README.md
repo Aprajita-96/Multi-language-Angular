@@ -4,6 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project helps you display our web content in preferably in english or spanish depending on your choice.
 
+
+
+ng g m i18n --module app
+
+
+
+
 @ng-translate is used.
 npm install @ngx-translate/core @ngx-translate/http-loader --save
 
